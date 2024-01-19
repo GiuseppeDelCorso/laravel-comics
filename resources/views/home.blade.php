@@ -10,6 +10,7 @@
 <body>
 
     <a href="{{ route('fumetti') }}">About</a>
+    <h1> {{ $title }}</h1>
 
 
 </body>
