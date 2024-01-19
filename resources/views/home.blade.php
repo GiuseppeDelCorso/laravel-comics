@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <a href="{{ route('fumetti') }}">About</a>
-    <h1> {{ $fumetti["title"] }}</h1>
+@section('content')
 
 
-</body>
+<div class="container">
+    <div class="row mt-5 d-flex">
+                @foreach ($dati as $fumetto)
+                <div class="col-2 d-flex flex-column align-items-center">
+                    <img class="imgStyle" src="{{$fumetto["thumb"]}}" alt="">
+                    <div class="py-4 text-white fs-7 text-center">{{$fumetto["title"]}}</div>
+                </div>
+                @endforeach
+            </div>
+    </div>
 
-</html>
+@endsection
